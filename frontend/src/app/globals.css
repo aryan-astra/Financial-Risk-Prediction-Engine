@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Global Styles ---- */
+
+:root {
+  --color-primary: #00AEEF;
+  --color-primary-dark: #0077B6;
+  --color-danger: #F44336;
+  --color-warning: #FF9800;
+  --color-success: #4CAF50;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* ---- Card Component ---- */
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-100 p-6;
+}
+
+.card-header {
+  @apply text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100;
+}
+
+/* ---- Risk Level Badges ---- */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-low {
+  @apply bg-green-100 text-green-700;
+}
+
+.badge-medium {
+  @apply bg-orange-100 text-orange-700;
+}
+
+.badge-high {
+  @apply bg-red-100 text-red-700;
+}
+
+/* ---- Form Styles ---- */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg
+    focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent
+    text-sm transition-colors;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-600 mb-1;
+}
+
+.btn-primary {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-medium
+    py-2.5 px-6 rounded-lg transition-colors shadow-sm
+    disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium
+    py-2.5 px-6 rounded-lg transition-colors;
+}
+
+/* ---- Stat Card ---- */
+.stat-card {
+  @apply card flex flex-col items-center justify-center text-center p-5;
+}
+
+.stat-value {
+  @apply text-3xl font-bold;
+}
+
+.stat-label {
+  @apply text-sm text-gray-500 mt-1;
+}
+
+/* ---- Table ---- */
+.data-table {
+  @apply w-full text-sm;
+}
+
+.data-table th {
+  @apply text-left px-4 py-3 bg-gray-50 text-gray-600 font-medium
+    border-b border-gray-200;
+}
+
+.data-table td {
+  @apply px-4 py-3 border-b border-gray-100;
+}
+
+.data-table tr:hover td {
+  @apply bg-blue-50/30;
+}
+
+/* ---- Loading Spinner ---- */
+.spinner {
+  @apply inline-block w-5 h-5 border-2 border-gray-300 border-t-blue-500
+    rounded-full animate-spin;
+}
